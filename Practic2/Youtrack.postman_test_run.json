@@ -1,0 +1,228 @@
+{
+	"id": "8fb99344-c9bf-4e84-83b3-bcf75b39ecd9",
+	"name": "Youtrack",
+	"timestamp": "2021-05-12T16:59:06.202Z",
+	"collection_id": "09d3e907-d101-4447-a765-0d7824552f14",
+	"folder_id": 0,
+	"environment_id": "ace3f4a8-56f9-4601-95a1-cb4eac725334",
+	"totalPass": 10,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "035a7024-a248-4ed6-8ce7-9580f17f2c02",
+			"name": "createmeta",
+			"url": "http://89.223.126.182:8080/api/admin/projects?fields=id,name,shortName,project",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Set environment's": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Set environment's": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Set environment's": true
+				}
+			]
+		},
+		{
+			"id": "50f19f43-8521-4d85-a640-f9f162cf20c9",
+			"name": "issue",
+			"url": "http://89.223.126.182:8080/api/issues",
+			"time": 249,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Set environment": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Set environment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				249
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Set environment": true
+				}
+			]
+		},
+		{
+			"id": "afd3e58e-cfaf-4e22-b26c-658b17fa787e",
+			"name": "issues",
+			"url": "http://89.223.126.182:8080/api/issues?fields=id,description,summary,project(id)&query=description:Description:%20AT_0.23141263837984138",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check summary & description": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check summary & description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check summary & description": true
+				}
+			]
+		},
+		{
+			"id": "d205b5d9-e5eb-46c0-b1be-28a1b0256cd4",
+			"name": "CustomField",
+			"url": "http://89.223.126.182:8080/api/issues/2-739?fields=idReadable,id,project(id,name),summary,description,customFields(name,$type,value(name,login))",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				64
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "42a2b834-d507-4a0c-9d37-8aa4413ac5d1",
+			"name": "new",
+			"url": "http://89.223.126.182:8080/api/issues/2-739?fields=customFields(id,name,value(avatarUrl,buildLink,color(id),fullName,id,isResolved,localizedName,login,minutes,name,presentation,text))",
+			"time": 164,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				164
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a50b674f-947b-4c64-a7e6-e4d4e9342b58",
+			"name": "new",
+			"url": "http://89.223.126.182:8080/api/issues/2-739?fields=customFields(id,name,value(avatarUrl,buildLink,color(id),fullName,id,isResolved,localizedName,login,minutes,name,presentation,text))",
+			"time": 63,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				63
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check status": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 719,
+	"collection": {
+		"requests": [
+			{
+				"id": "035a7024-a248-4ed6-8ce7-9580f17f2c02",
+				"method": "GET"
+			},
+			{
+				"id": "50f19f43-8521-4d85-a640-f9f162cf20c9",
+				"method": "POST"
+			},
+			{
+				"id": "afd3e58e-cfaf-4e22-b26c-658b17fa787e",
+				"method": "GET"
+			},
+			{
+				"id": "d205b5d9-e5eb-46c0-b1be-28a1b0256cd4",
+				"method": "GET"
+			},
+			{
+				"id": "42a2b834-d507-4a0c-9d37-8aa4413ac5d1",
+				"method": "POST"
+			},
+			{
+				"id": "a50b674f-947b-4c64-a7e6-e4d4e9342b58",
+				"method": "GET"
+			}
+		]
+	}
+}
