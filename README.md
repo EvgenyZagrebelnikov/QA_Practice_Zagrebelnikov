@@ -1,1 +1,1 @@
-# ShishQA-Zagrebelnikov
+# QA_Practice_Zagrebelnikov
